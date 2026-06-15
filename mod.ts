@@ -379,20 +379,6 @@ const personaDeactivate: Tool = {
 // Middleware: pre-execution (injects persona system prompt)
 // ---------------------------------------------------------------------------
 
-export const preMiddleware = async (
-  _toolName: string,
-  args: Record<string, unknown>,
-  _ctx: PluginContext,
-): Promise<{ allowed: boolean; args: Record<string, unknown>; reason?: string }> => {
-  if (activePersona) {
-    return {
-      allowed: true,
-      args: {
-        ...args,
-        _activePersona: activePersona.id,
-        _systemPrompt: activePersona.systemPrompt,
-      },
-    };
   }
   return { allowed: true, args };
 };
@@ -435,4 +421,3 @@ export const tools: Tool[] = [
   personaDeactivate,
 ];
 
-void preMiddleware;

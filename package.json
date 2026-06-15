@@ -1,6 +1,6 @@
 {
   "name": "cortex-plugin-persona-switcher",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Loadable personality profiles (SRE, Data Scientist, Frontend Dev, etc.)",
   "type": "module",
   "main": "mod.ts",

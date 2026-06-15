@@ -1,6 +1,6 @@
 {
   "name": "cortex-plugin-persona-switcher",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Loadable personality profiles (SRE, Data Scientist, Frontend Dev, etc.)",
   "kind": "esm",
   "entryPoint": "mod.ts",
@@ -10,8 +10,7 @@
   "repository": "https://github.com/CortexPrism/cortex-plugin-persona-switcher",
   "homepage": "https://cortexprism.io/marketplace/plugins/persona-switcher",
   "capabilities": [
-    "tools",
-    "middleware:pre"
+    "tools"
   ],
   "tools": [
     {
@@ -92,12 +91,30 @@
             "type": "select",
             "defaultValue": "none",
             "options": [
-              { "label": "None", "value": "none" },
-              { "label": "SRE", "value": "sre" },
-              { "label": "Data Scientist", "value": "data-scientist" },
-              { "label": "Frontend Dev", "value": "frontend-dev" },
-              { "label": "DevOps", "value": "devops" },
-              { "label": "Security Auditor", "value": "security-auditor" }
+              {
+                "label": "None",
+                "value": "none"
+              },
+              {
+                "label": "SRE",
+                "value": "sre"
+              },
+              {
+                "label": "Data Scientist",
+                "value": "data-scientist"
+              },
+              {
+                "label": "Frontend Dev",
+                "value": "frontend-dev"
+              },
+              {
+                "label": "DevOps",
+                "value": "devops"
+              },
+              {
+                "label": "Security Auditor",
+                "value": "security-auditor"
+              }
             ],
             "description": "Default persona to activate on load"
           }
