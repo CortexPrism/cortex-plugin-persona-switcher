@@ -1,0 +1,114 @@
+{
+  "name": "cortex-plugin-persona-switcher",
+  "version": "1.0.0",
+  "description": "Loadable personality profiles (SRE, Data Scientist, Frontend Dev, etc.)",
+  "kind": "esm",
+  "entryPoint": "mod.ts",
+  "runtime": "deno",
+  "author": "CortexPrism",
+  "license": "MIT",
+  "repository": "https://github.com/CortexPrism/cortex-plugin-persona-switcher",
+  "homepage": "https://cortexprism.io/marketplace/plugins/persona-switcher",
+  "capabilities": [
+    "tools",
+    "middleware:pre"
+  ],
+  "tools": [
+    {
+      "name": "persona_list",
+      "description": "List all available personas",
+      "params": []
+    },
+    {
+      "name": "persona_activate",
+      "description": "Activate a persona profile",
+      "params": [
+        {
+          "name": "persona_id",
+          "type": "string",
+          "description": "Persona identifier (e.g. sre, data-scientist, frontend-dev, devops, security-auditor)",
+          "required": true
+        }
+      ]
+    },
+    {
+      "name": "persona_create",
+      "description": "Create a custom persona profile",
+      "params": [
+        {
+          "name": "name",
+          "type": "string",
+          "description": "Name for the custom persona",
+          "required": true
+        },
+        {
+          "name": "role",
+          "type": "string",
+          "description": "Role description",
+          "required": true
+        },
+        {
+          "name": "system_prompt",
+          "type": "string",
+          "description": "System prompt for the persona",
+          "required": true
+        },
+        {
+          "name": "tool_scopes",
+          "type": "string",
+          "description": "Comma-separated tool scopes",
+          "required": false
+        },
+        {
+          "name": "expertise",
+          "type": "string",
+          "description": "Comma-separated expertise tags",
+          "required": false
+        }
+      ]
+    },
+    {
+      "name": "persona_current",
+      "description": "Get the currently active persona",
+      "params": []
+    },
+    {
+      "name": "persona_deactivate",
+      "description": "Deactivate current persona and return to default",
+      "params": []
+    }
+  ],
+  "peerDependencies": {
+    "cortex": ">=1.0.0"
+  },
+  "ui": {
+    "settings": [
+      {
+        "section": "General",
+        "fields": [
+          {
+            "key": "defaultPersona",
+            "label": "Default Persona",
+            "type": "select",
+            "defaultValue": "none",
+            "options": [
+              { "label": "None", "value": "none" },
+              { "label": "SRE", "value": "sre" },
+              { "label": "Data Scientist", "value": "data-scientist" },
+              { "label": "Frontend Dev", "value": "frontend-dev" },
+              { "label": "DevOps", "value": "devops" },
+              { "label": "Security Auditor", "value": "security-auditor" }
+            ],
+            "description": "Default persona to activate on load"
+          }
+        ]
+      }
+    ]
+  },
+  "aiDisclosure": {
+    "tools": [
+      "Claude Code (Anthropic)"
+    ],
+    "humanReview": true
+  }
+}

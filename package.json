@@ -1,0 +1,30 @@
+{
+  "name": "cortex-plugin-persona-switcher",
+  "version": "1.0.0",
+  "description": "Loadable personality profiles (SRE, Data Scientist, Frontend Dev, etc.)",
+  "type": "module",
+  "main": "mod.ts",
+  "scripts": {
+    "dev": "deno run --watch --allow-all mod.ts",
+    "test": "deno test --allow-all test/**/*.test.ts",
+    "fmt": "deno fmt",
+    "fmt:check": "deno fmt --check",
+    "lint": "deno lint"
+  },
+  "keywords": [
+    "cortex",
+    "plugin",
+    "cortex-plugin",
+    "persona",
+    "personality",
+    "role-switching",
+    "esm",
+    "deno"
+  ],
+  "author": "CortexPrism",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/CortexPrism/cortex-plugin-persona-switcher.git"
+  }
+}
