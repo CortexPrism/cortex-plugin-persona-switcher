@@ -30,13 +30,16 @@ List all available personas.
 Activate a persona profile.
 
 **Parameters:**
-- `persona_id` (string, required) — Persona ID (sre, data-scientist, frontend-dev, devops, security-auditor)
+
+- `persona_id` (string, required) — Persona ID (sre, data-scientist, frontend-dev, devops,
+  security-auditor)
 
 ### persona_create
 
 Create a custom persona profile.
 
 **Parameters:**
+
 - `name` (string, required) — Name for the custom persona
 - `role` (string, required) — Role description
 - `system_prompt` (string, required) — System prompt for the persona
@@ -57,13 +60,13 @@ Deactivate current persona and return to default.
 
 ## Built-in Personas
 
-| ID | Name | Role |
-|----|------|------|
-| sre | SRE | System reliability engineering, incident response |
-| data-scientist | Data Scientist | Data analysis, ML, statistics |
-| frontend-dev | Frontend Developer | React/Vue/Svelte, CSS, accessibility |
-| devops | DevOps Engineer | CI/CD, Docker, K8s, Terraform |
-| security-auditor | Security Auditor | OWASP, SAST, secret scanning |
+| ID               | Name               | Role                                              |
+| ---------------- | ------------------ | ------------------------------------------------- |
+| sre              | SRE                | System reliability engineering, incident response |
+| data-scientist   | Data Scientist     | Data analysis, ML, statistics                     |
+| frontend-dev     | Frontend Developer | React/Vue/Svelte, CSS, accessibility              |
+| devops           | DevOps Engineer    | CI/CD, Docker, K8s, Terraform                     |
+| security-auditor | Security Auditor   | OWASP, SAST, secret scanning                      |
 
 ## Configuration
 

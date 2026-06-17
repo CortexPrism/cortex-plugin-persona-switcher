@@ -5,7 +5,7 @@
  * #6 in the official plugin registry.
  */
 
-import type { Tool, ToolContext, PluginContext, ToolCallResult } from "cortex/plugins";
+import type { Tool, ToolContext, PluginContext, ToolCallResult } from "./types.ts";
 
 // ---------------------------------------------------------------------------
 // Types
