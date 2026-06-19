@@ -31,8 +31,8 @@ Activate a persona profile.
 
 **Parameters:**
 
-- `persona_id` (string, required) — Persona ID (sre, data-scientist, frontend-dev, devops,
-  security-auditor)
+- `persona_id` (string, required) — Persona ID (sre, data-scientist,
+  frontend-dev, devops, security-auditor)
 
 ### persona_create
 

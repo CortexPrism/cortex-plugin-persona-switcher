@@ -142,7 +142,7 @@ Deno.test("persona_current - returns no active persona by default", async () => 
   // Reset state — deactivate any active persona from previous tests
   const deactivateTool = findTool("persona_deactivate");
   if (deactivateTool) await deactivateTool.execute({}, mockContext);
-  
+
   const tool = findTool("persona_current");
   if (!tool) throw new Error("persona_current tool not found");
 
@@ -170,8 +170,10 @@ Deno.test("persona_current - returns active persona after activation", async () 
 Deno.test("persona_deactivate - handles no active persona", async () => {
   // First ensure a persona IS active, then deactivate should work
   const activateTool = findTool("persona_activate");
-  if (activateTool) await activateTool.execute({ persona_id: "professional" }, mockContext);
-  
+  if (activateTool) {
+    await activateTool.execute({ persona_id: "professional" }, mockContext);
+  }
+
   // Now deactivate it
   const tool = findTool("persona_deactivate");
   if (!tool) throw new Error("persona_deactivate tool not found");
