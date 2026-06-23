@@ -5,12 +5,7 @@
  * #6 in the official plugin registry.
  */
 
-import type {
-  PluginContext,
-  Tool,
-  ToolCallResult,
-  ToolContext,
-} from "./types.ts";
+import type { PluginContext, Tool, ToolCallResult } from "cortex/plugins";
 
 // ---------------------------------------------------------------------------
 // Types
@@ -146,7 +141,7 @@ const personaList: Tool = {
 
   execute: async (
     _args: Record<string, unknown>,
-    _ctx: ToolContext,
+    _ctx: PluginContext,
   ): Promise<ToolCallResult> => {
     const start = Date.now();
     const toolName = "persona_list";
@@ -210,7 +205,7 @@ const personaActivate: Tool = {
 
   execute: async (
     args: Record<string, unknown>,
-    _ctx: ToolContext,
+    _ctx: PluginContext,
   ): Promise<ToolCallResult> => {
     const start = Date.now();
     const toolName = "persona_activate";
@@ -312,7 +307,7 @@ const personaCreate: Tool = {
 
   execute: async (
     args: Record<string, unknown>,
-    _ctx: ToolContext,
+    _ctx: PluginContext,
   ): Promise<ToolCallResult> => {
     const start = Date.now();
     const toolName = "persona_create";
@@ -422,7 +417,7 @@ const personaCurrent: Tool = {
 
   execute: async (
     _args: Record<string, unknown>,
-    _ctx: ToolContext,
+    _ctx: PluginContext,
   ): Promise<ToolCallResult> => {
     const start = Date.now();
     const toolName = "persona_current";
@@ -483,7 +478,7 @@ const personaDeactivate: Tool = {
 
   execute: async (
     _args: Record<string, unknown>,
-    _ctx: ToolContext,
+    _ctx: PluginContext,
   ): Promise<ToolCallResult> => {
     const start = Date.now();
     const toolName = "persona_deactivate";
